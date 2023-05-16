@@ -7,7 +7,10 @@ public class WorkingWithQueue {
     public static void main(String[] args) {
         //Here we have reverse of Stuck princeple.
         //FIRST IN - FIRST OUT || FIFO
+        queues();
+    }
 
+    private static void queues() {
         Queue<Person> people = new LinkedList<>();
 
         people.add(new Person("Maks", 19));
@@ -18,5 +21,6 @@ public class WorkingWithQueue {
         System.out.println(people.poll()); // sout first element and remove it
         System.out.println(people);
     }
-    record Person(String name, int age){}
+
+    public record Person(String name, int age){}
 }
