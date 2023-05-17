@@ -5,6 +5,9 @@ import java.util.Map;
 
 public class WorkingWithMap {
     public static void main(String[] args) {
+        mapped();
+    }
+    private static void mapped() {
         Map<Integer, Person> map = new HashMap<>();
 
         map.put(1, new Person("Vlad"));
@@ -20,5 +23,6 @@ public class WorkingWithMap {
         System.out.println(map.getOrDefault(2, new Person("def")));
         System.out.println(map.size());
     }
+
     record Person(String s){}
 }
