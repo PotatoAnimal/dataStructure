@@ -1,5 +1,7 @@
 package rmnk.vld.map;
 
+import rmnk.vld.hashFunctionsAndHashCode.WorkingWithHashFunctionsAndHashCode;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,16 +15,10 @@ public class WorkingWithMap {
         map.put(1, new Person("Vlad"));
         map.put(2, new Person("Vlad"));
         map.put(3, new Person("Roma"));
-        System.out.println(map);
-        System.out.println(map.entrySet());
-        System.out.println(map.keySet());
-        System.out.println(map.containsKey(3));
-        System.out.println(map.values());
-        System.out.println(map.remove(2));
-        System.out.println(map);
+        WorkingWithHashFunctionsAndHashCode.mapping(map);
         System.out.println(map.getOrDefault(2, new Person("def")));
         System.out.println(map.size());
     }
 
-    record Person(String s){}
+    public record Person(String s){}
 }
